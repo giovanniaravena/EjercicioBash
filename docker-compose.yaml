@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  ubuntu:
+    container_name: script-ubuntu
+    build: ./
+    expose:
+      - 80:80
+    volumes:
+      - ./scripts/:/home/user1/scripts
+    restart: on-failure
+    command: ["sleep","infinity"]
